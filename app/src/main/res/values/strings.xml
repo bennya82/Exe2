@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Exe2</string>
+    <string name="btn_act_main_click">ClickMe</string>
+    <string name="et_act_main_enternumber1">נא הזן מספר ראשון</string>
+    <string name="et_act_main_enternumber2">נא הזן מספר שני</string>
 </resources>
