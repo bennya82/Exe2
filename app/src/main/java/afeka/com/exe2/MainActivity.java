@@ -12,10 +12,6 @@ import afeka.com.exe2.common.Person;
 
 public class MainActivity extends AppCompatActivity {
 
-    public final String NUM1 = "NUM1";
-    public final String NUM2 = "NUM2";
-    public final String NUM3 = "NUM3";
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,13 +19,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.act_main_imageview_example);
 
         ImageView img = (ImageView)findViewById(R.id.act_main_imgView);
-        String url = "https://i.pinimg.com/736x/9c/dd/dc/9cdddcffb3af920d7e4525c19bf4f339--emoji-emoticons-emojis.jpg";
-
+        String url = getString(R.string.image_url);
         //AsyncImageView asyncImageView = new AsyncImageView(img,url);
-
         AsyncImageView asyncImageView = new AsyncImageView(img);
         asyncImageView.loadUrl(url);
-
 
         Button btn = (Button)findViewById(R.id.btn_act_main_continue);
         btn.setOnClickListener(new View.OnClickListener() {
@@ -76,11 +69,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void goToActivity2(){
         Intent intent = new Intent(this,Main2Activity.class);
-        intent.putExtra("Key","Value");
-
-        intent.putExtra(NUM1,1);
-        intent.putExtra(NUM2,2);
-        intent.putExtra(NUM3,3);
+        //Example:
+        //intent.putExtra("Key","Value");
+        intent.putExtra(Main2Activity.NUM1,1);
+        intent.putExtra(Main2Activity.NUM2,2);
+        intent.putExtra(Main2Activity.NUM3,3);
         startActivity(intent);
 
 

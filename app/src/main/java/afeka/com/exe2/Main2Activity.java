@@ -11,6 +11,11 @@ import android.widget.Toast;
 
 public class Main2Activity extends AppCompatActivity implements View.OnClickListener {
 
+    public static final String NUM1 = "NUM1";
+    public static final String NUM2 = "NUM2";
+    public static final String NUM3 = "NUM3";
+    public static final String RESULT = "RESULT";
+    public static final int    REQUEST_CODE = 1;
     EditText editText1;
     EditText editText2;
     TextView textViewResult;
@@ -59,8 +64,8 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == 1){
-            String result = data.getStringExtra("RESULT");
+        if (requestCode == REQUEST_CODE){
+            String result = data.getStringExtra(Main2Activity.RESULT);
             Toast.makeText(this,result.toString(),Toast.LENGTH_LONG).show();
         }
     }

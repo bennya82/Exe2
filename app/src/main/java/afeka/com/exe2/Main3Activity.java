@@ -12,13 +12,12 @@ public class Main3Activity extends AppCompatActivity {
         setContentView(R.layout.activity_main3);
 
         Bundle data = getIntent().getExtras();
-        String num1Str =data.getString("NUM1");
-        String num2Str = data.getString("NUM2");
-
+        String num1Str =data.getString(Main2Activity.NUM1);
+        String num2Str = data.getString(Main2Activity.NUM2);
 
         String result = String.format("%s :) %s",num1Str,num2Str);
         Intent resIntent = new Intent();
-        resIntent.putExtra("RESULT",result);
+        resIntent.putExtra(Main2Activity.RESULT,result);
         setResult(RESULT_OK,resIntent);
         finish();
     }

@@ -3,4 +3,5 @@
     <string name="btn_act_main_click">ClickMe</string>
     <string name="et_act_main_enternumber1">נא הזן מספר ראשון</string>
     <string name="et_act_main_enternumber2">נא הזן מספר שני</string>
+    <string name="image_url">https://i.pinimg.com/736x/9c/dd/dc/9cdddcffb3af920d7e4525c19bf4f339--emoji-emoticons-emojis.jpg</string>
 </resources>
